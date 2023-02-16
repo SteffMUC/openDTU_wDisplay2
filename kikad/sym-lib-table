@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "ESP32-NodeMCU_WROOM_32")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ESP32-NodeMCU_WROOM_32/ESP32-NodeMCU_WROOM_32.kicad_sym")(options "")(descr ""))
+  (lib (name "nRF24L01+PA+LNA")(type "KiCad")(uri "${KIPRJMOD}/Libraries/nRF24L01+PA+LNA/nRF24L01+PA+LNA.kicad_sym")(options "")(descr ""))
+  (lib (name "SSD1306-128x64_OLED")(type "Legacy")(uri "${KIPRJMOD}/Libraries/KiCad-SSD1306-128x64-master/library/SSD1306-128x64_OLED.lib")(options "")(descr ""))
+)
