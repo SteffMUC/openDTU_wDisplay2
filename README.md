@@ -9,7 +9,7 @@ Board will get dedicated case with stand in order to have the capability to put 
 
 Picture of model:
 <p float="left">
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/kicad_board3d.jpg" alt="Pre Assembly Part1" width="200"/>
+  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/kicad_board3d.jpg" alt="Pre Assembly Part1" width="600"/>
 
 </p>
 
