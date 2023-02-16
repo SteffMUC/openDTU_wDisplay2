@@ -6,6 +6,13 @@ https://github.com/dokuhn/openDTU-BreakoutBoard
 2nd version with much smaller PCB (1st version: https://github.com/SteffMUC/openDTU_wDisplay)
 Target is to have ESP32 on backside, Display and nRF24l01 on frontside.
 Board will get dedicated case with stand in order to have the capability to put it upright on a shelf.
+
+Picture of model:
+<p float="left">
+  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/kicad_board3d.jpg" alt="Pre Assembly Part1" width="200"/>
+
+</p>
+
 Currently in production at jclPCB, photos will be published soon.
 Designed with KiCAD.
 
