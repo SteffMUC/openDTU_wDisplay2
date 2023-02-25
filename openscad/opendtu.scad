@@ -6,10 +6,62 @@ $fn=100;
 //#translate([0,0,7])opendtu_pcb(); // rough model for pcb w esp32+nrf+display
 
 //case_body();
-//
-rotate([0,180,0]) 
-    case_top();
+rotate([0,50,0]) translate([69,-2.5,-2.5])case_holder();
 
+//
+//rotate([0,180,0]) 
+//    case_top();
+    
+//translate([-96,0,-30]) 
+//    spacer();
+
+module case_holder() {
+
+//------------------------holder
+difference() {
+    union() {
+        translate([-42.5,-6,0]) roundedcube(80,46,30,4);
+        difference() {
+            rotate([0,-50,0]) translate([-28,-6,-34]) roundedcube(62,46,7,4);
+            rotate([0,-50,0]) translate([-36,12,-34.5]) roundedcube(55,10,7,1);
+            rotate([0,-50,0]) translate([0,2,-34.5]) roundedcube(20,30,7,1);
+        }
+        rotate([0,-50,0]) translate([-28,-6,-30]) roundedcube(58,46,7,4);
+        rotate([0,-50,0]) translate([-28,-6,-26]) roundedcube(58,46,7,4);
+        rotate([0,-50,0]) translate([-28,-6,-22]) roundedcube(58,46,7,4);
+        rotate([0,-50,0]) translate([-28,-6,-18]) roundedcube(58,46,7,4);
+    }
+    translate([-43.5,-4,2]) roundedcube(79,42,30,4);
+    translate([15,5,-20]) roundedcube(20,25,30,4);
+    translate([-40,5,-0.5]) roundedcube(27,25,30,4);
+}
+
+}
+
+
+module spacer() {
+
+    //------------------------spacer display
+    difference() {
+        translate([3,0,0]) roundedcube(90,28,8,2);
+        translate([11,6,-0.5]) roundedcube(3,18,9,0.5);
+        translate([56.5,7,-0.5]) roundedcube(6,19,9,0.5);
+        translate([29,-0.5,-0.5]) roundedcube(50,4,9,0.5);
+        translate([29,25,-0.5]) roundedcube(50,4,9,0.5);
+
+        //------------------------cutouts for stamps of case top
+        //bottom right
+        translate([90,4,-0.5]) scale([1,1,1]) cylinder(h=14, d=10, center=false);
+        //top right
+        translate([90,25,-0.5]) scale([1,1,1]) cylinder(h=14, d=10, center=false);
+        //top left
+        translate([5,25,-0.5]) scale([1,1,1]) cylinder(h=14, d=10, center=false);
+        //bottom left
+        translate([5,4,-0.5]) scale([1,1,1]) cylinder(h=14, d=10, center=false);
+
+    }
+
+}
 
 
 module case_body() {
@@ -102,9 +154,9 @@ module opendtu_pcb() {
     translate([10,-4,2])cube([28,55,14]);
     translate([20.5,-5,14])cube([8,6,3]);*/
     //nrf
-    translate([57,6,11.5])cube([30,15,14]);
+        //translate([57,6,11.5])cube([30,15,14]);
     //display
-    translate([8,1,11.5])cube([27.5,27.5,13.5]);
+        //translate([8,1,11.5])cube([27.5,27.5,13.5]);
     //translate([59,13.5+9,2])cube([27.5,16,17]);
     /*difference(){*/
         //cube([96,31,2]); //pcb
