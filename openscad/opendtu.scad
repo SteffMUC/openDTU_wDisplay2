@@ -6,11 +6,11 @@ $fn=100;
 //#translate([0,0,7])opendtu_pcb(); // rough model for pcb w esp32+nrf+display
 
 //case_body();
-rotate([0,50,0]) translate([69,-2.5,-2.5])case_holder();
+//rotate([0,50,0]) translate([69,-2.5,-2.5])case_holder();
 
 //
-//rotate([0,180,0]) 
-//    case_top();
+rotate([0,180,0]) 
+    case_top();
     
 //translate([-96,0,-30]) 
 //    spacer();
@@ -43,11 +43,11 @@ module spacer() {
 
     //------------------------spacer display
     difference() {
-        translate([3,0,0]) roundedcube(90,28,8,2);
-        translate([11,6,-0.5]) roundedcube(3,18,9,0.5);
-        translate([56.5,7,-0.5]) roundedcube(6,19,9,0.5);
-        translate([29,-0.5,-0.5]) roundedcube(50,4,9,0.5);
-        translate([29,25,-0.5]) roundedcube(50,4,9,0.5);
+        translate([3,0,0]) roundedcube(90,28,10,2);
+        translate([11,6,-0.5]) roundedcube(3,18,11,0.5);
+        translate([56.5,7,-0.5]) roundedcube(6,19,11,0.5);
+        translate([29,-0.5,-0.5]) roundedcube(50,4,11,0.5);
+        translate([29,25,-0.5]) roundedcube(50,4,11,0.5);
 
         //------------------------cutouts for stamps of case top
         //bottom right
@@ -68,28 +68,33 @@ module case_body() {
 
 //------------------------stamps for pcb
 //bottom right
-translate([90.5,4.5,2]) scale([1,1,1]) cylinder(h=19, d=3, center=false);
-translate([90.5,4.5,2]) scale([1,1,1]) cylinder(h=15.5, d=8, center=false);
+translate([90.5,4.5,2]) scale([1,1,1]) cylinder(h=19, d=4, center=false);
+translate([85.5,0,7.5]) scale([1,1,1]) cube([10,30,10]);
+//translate([90.5,4.5,2]) scale([1,1,1]) cylinder(h=15.5, d=8, center=false);
 //top right
-translate([90.5,25,2]) scale([1,1,1]) cylinder(h=19, d=3, center=false);
-translate([90.5,25,2]) scale([1,1,1]) cylinder(h=15.5, d=8, center=false);
+translate([90.5,25,2]) scale([1,1,1]) cylinder(h=19, d=4, center=false);
+//translate([90.5,25,2]) scale([1,1,1]) cylinder(h=15.5, d=8, center=false);
 //top left
-translate([4.5,25,2]) scale([1,1,1]) cylinder(h=19, d=3, center=false);
-translate([4.5,25,2]) scale([1,1,1]) cylinder(h=15.5, d=8, center=false);
+translate([4.5,25,2]) scale([1,1,1]) cylinder(h=19, d=4, center=false);
+translate([0,0,2]) scale([1,1,1]) cube([10,30,15.5]);
+//translate([4.5,25,2]) scale([1,1,1]) cylinder(h=15.5, d=8, center=false);
 //bottom left
-translate([4.5,4.5,2]) scale([1,1,1]) cylinder(h=19, d=3, center=false);
-translate([4.5,4.5,2]) scale([1,1,1]) cylinder(h=15.5, d=8, center=false);
+translate([4.5,4.5,2]) scale([1,1,1]) cylinder(h=19, d=4, center=false);
+//translate([4.5,4.5,2]) scale([1,1,1]) cylinder(h=15.5, d=8, center=false);
 
 
 //------------------------case body (+6)
 rotate([0,90,0]) translate([-35,-4,50]) cylinder(h=10,d=2,center=false);
 rotate([0,90,0]) translate([-35,33,50]) cylinder(h=10,d=2,center=false);
 difference() {
-    translate([-4,-6,0]) roundedcube(107,41,36,4);
-    translate([-2,-4,2]) roundedcube(82,37,36,4);
-    translate([-2,-4,10]) roundedcube(103,37,36,4);
-    translate([81.5,8.5,-0.5]) roundedcube(50,12,8,4);
-    rotate([90,0,90])translate([10,1.5,80]) roundedcube(10,5,3,1);
+    //translate([-4,-6,0]) roundedcube(107,41,36,4);
+    translate([-7,-6,0]) roundedcube(110,41,36,4);
+    //translate([-2,-4,2]) roundedcube(82,37,36,4);
+    translate([-5,-4,2]) roundedcube(85,37,36,4);
+    //translate([-2,-4,10]) roundedcube(103,37,36,4);
+    translate([-5,-4,10]) roundedcube(106,37,36,4);
+    translate([80,8.5,-0.5]) roundedcube(50,12,8,0.5); // usb cable
+    rotate([90,0,90])translate([10,1.5,80]) roundedcube(10,5,3,1); // usb plug
     //translate([65,-6.5,2]) roundedcube(27.5,3,30,2);// debug
     translate([30,5,-0.5]) roundedcube(3,20,30,2);// cutout esp32
     translate([40,5,-0.5]) roundedcube(3,20,30,2);// cutout esp32
@@ -102,8 +107,10 @@ module case_top() {
 
 //------------------------case top (leave 1mm gap to body)
 difference() {
-    translate([-1.5,-3.5,2]) roundedcube(102,36,32,4); 
-    translate([0.5,-1.5,1.5]) cube([98,32,30.5]); 
+    //translate([-1.5,-3.5,2]) roundedcube(102,36,32,4); 
+    translate([-4.5,-3.5,2]) roundedcube(105,36,32,4); 
+    //translate([0.5,-1.5,1.5]) cube([98,32,30.5]); 
+    translate([-2.5,-1.5,1.5]) cube([101,32,30.5]); 
     //translate([-2,-4,1.5]) roundedcube(110,60,30.5,4); //debug needs commented
     translate([10,1,8]) roundedcube(16,27.5,30,4);// cutout display
     //translate([15,10,2]) roundedcube(27.5,3,30,2);// cutout esp32 + nrf
@@ -126,22 +133,22 @@ difference() {
 //bottom right
 difference() {
     translate([90,5,19]) scale([1,1,1]) cylinder(h=14, d=8, center=false);
-    translate([90,5,2]) scale([1,1,1]) cylinder(h=20, d=4, center=false);
+    translate([90,5,2]) scale([1,1,1]) cylinder(h=20, d=4.5, center=false);
 }
 //top right
 difference() {
     translate([90,25,19]) scale([1,1,1]) cylinder(h=14, d=8, center=false);
-    translate([90,25,2]) scale([1,1,1]) cylinder(h=20, d=4, center=false);
+    translate([90,25,2]) scale([1,1,1]) cylinder(h=20, d=4.5, center=false);
 }
 //top left
 difference() {
     translate([5,25,19]) scale([1,1,1]) cylinder(h=14, d=8, center=false);
-    translate([5,25,2]) scale([1,1,1]) cylinder(h=20, d=4, center=false);
+    translate([5,25,2]) scale([1,1,1]) cylinder(h=20, d=4.5, center=false);
 }
 //bottom left
 difference() {
     translate([5,5,19]) scale([1,1,1]) cylinder(h=14, d=8, center=false);
-    translate([5,5,2]) scale([1,1,1]) cylinder(h=20, d=4, center=false);
+    translate([5,5,2]) scale([1,1,1]) cylinder(h=20, d=4.5, center=false);
 }
 
 }
