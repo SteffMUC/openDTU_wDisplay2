@@ -1,6 +1,6 @@
 $fn=100;
 
-part="top_printable"; // body OR top OR body_top_debug OR top_printable OR spacer OR holder OR holder_ikea
+part="holder_ikea"; // body OR top OR body_top_debug OR top_printable OR spacer OR holder OR holder_ikea
 debug="false"; // true OR false
 
 if (debug == "true") {
@@ -48,14 +48,19 @@ else{ // print all - except holder
 
 
 module case_holder_ikea(){
-	rotate([0,270,0]) union(){
+	if (debug == "true") {
+        #translate([-18,-30,0]) cube([18,3,3]);// debug        
+        translate([-18,-15,0]) cube([3,30,3]);// debug        
+        //translate([-18,-17.5,0]) cube([3,35,3]);// debug        
+    }
+    rotate([0,270,0]) union(){
 		difference(){
 			union(){
-                translate([0,0,1.5]) cylinder(r=(43/2)*1.25, h=3, center=true);
-                translate([0,0,-60]) cylinder(r=(43/2)*1.25, h=20, center=true);
-                translate([0,0,-22.5]) cylinder(r=(43/2), h=80, center=true);
+                translate([0,0,-1.5]) cylinder(r=(35/2)*1.25, h=3, center=true);
+                translate([0,0,-60]) cylinder(r=(35/2)*1.25, h=20, center=true);
+                translate([0,0,-22.5]) cylinder(r=(35/2), h=80, center=true);
             }
-			cylinder(r=(43/2)/1.14, h=200, center=true);
+			cylinder(r=(35/2)/1.14, h=200, center=true);
             rotate([-10,0,0]) translate([-40,-40,-75]) roundedcube(80,80,15,4);
 		}
 	}
