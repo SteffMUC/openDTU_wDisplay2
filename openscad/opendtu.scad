@@ -1,20 +1,51 @@
-
-
 $fn=100;
 
+part="top_printable"; // body OR top OR body_top_debug OR top_printable OR spacer OR holder OR holder_ikea
+debug="false"; // true OR false
 
-//#translate([0,0,7])opendtu_pcb(); // rough model for pcb w esp32+nrf+display
+if (debug == "true") {
+    #translate([0,0,7])opendtu_pcb(); // rough model for pcb w esp32+nrf+display
+}
 
-//case_body();
+if (part == "body"){
+    case_body();
+}
 
-//rotate([0,50,0]) translate([69,-2.5,-2.5])case_holder();
-//rotate([0,0,0]) translate([0,0,0])case_holder_ikea();
-
-rotate([0,180,0]) 
+else if (part == "top"){
     case_top();
-    
-//translate([-96,0,-30]) 
-//    spacer();
+}
+
+else if (part == "body_top_debug"){
+    #translate([0,0,7])opendtu_pcb();
+    case_body();
+    translate([0,0,19])spacer();
+    case_top();
+    }
+
+else if (part == "top_printable"){
+    rotate([0,180,0]) 
+    case_top();
+}
+
+else if (part == "spacer"){
+    if (debug == "true") {translate([-96,0,-30])spacer();} 
+    else {spacer();}
+
+}
+
+else if (part == "holder"){
+    rotate([0,50,0]) translate([69,-2.5,-2.5])case_holder();
+}
+else if (part == "holder_ikea"){
+    rotate([0,0,0]) translate([0,0,0])case_holder_ikea();
+}
+
+else{ // print all - except holder
+	translate([10,0,0]) case_body();
+    translate([100,50,36]) rotate([0,180,0]) case_top();
+    translate([0,-50,0]) spacer();
+}
+
 
 module case_holder_ikea(){
 	rotate([0,270,0]) union(){
@@ -108,7 +139,7 @@ translate([4,4.5,2]) scale([1,1,1]) cylinder(h=19, d=4, center=false);
 
 
 //------------------------case body (+6)
-rotate([0,90,0]) translate([-37,-4,44]) cylinder(h=10,d=2,center=false);
+rotate([0,90,0]) translate([-37,-4,44]) cylinder(h=10,d=2,center=false); //notches for top
 rotate([0,90,0]) translate([-37,33,44]) cylinder(h=10,d=2,center=false);
 difference() {
     //translate([-4,-6,0]) roundedcube(107,41,36,4);
@@ -119,7 +150,10 @@ difference() {
     translate([-5,-4,10]) roundedcube(106,37,38,4);
     translate([80,8.5,-0.5]) roundedcube(50,12,8,0.5); // usb cable
     rotate([90,0,90])translate([10,1.5,80]) roundedcube(10,5,3,1); // usb plug
-    //translate([65,-6.5,2]) roundedcube(27.5,3,30,2);// debug
+    if (debug == "true") {
+        translate([65,-6.5,2]) roundedcube(27.5,3,30,2);// debug
+        translate([-8,0,0]) roundedcube(5,25,25,2);// debug        
+    }
     translate([30,5,-0.5]) roundedcube(3,20,30,2);// cutout esp32
     translate([40,5,-0.5]) roundedcube(3,20,30,2);// cutout esp32
     translate([50,5,-0.5]) roundedcube(3,20,30,2);// cutout esp32
@@ -134,9 +168,11 @@ difference() {
     //translate([-1.5,-3.5,2]) roundedcube(102,36,32,4); 
     translate([-4.5,-3.5,2]) roundedcube(105,36,34,4); 
     //translate([0.5,-1.5,1.5]) cube([98,32,30.5]); 
-    translate([-2.5,-1.5,1.5]) cube([101,32,30.5]); 
-    //translate([-2,-4,1.5]) roundedcube(110,60,30.5,4); //debug needs commented
-    translate([16,1,8]) roundedcube(16,27.5,30,4);// cutout display
+    translate([-2.5,-1.5,1.5]) cube([101,32,32.5]); 
+    if (debug == "true") {
+        translate([-2,-4,1.5]) roundedcube(110,60,30.5,4); //debug needs commented
+    }
+    translate([13,1,10]) roundedcube(16,27.5,30,4);// cutout display
     //translate([15,10,2]) roundedcube(27.5,3,30,2);// cutout esp32 + nrf
     //translate([15,20,2]) roundedcube(27.5,3,30,2);
     //translate([15,30,2]) roundedcube(27.5,3,30,2);
@@ -149,29 +185,29 @@ difference() {
 
 //------------------------case top, frame for display
 difference() {
-    translate([14,-1,30]) roundedcube(20,31.5,2,2); 
-    translate([16,1,29.5]) roundedcube(16,27.5,30,4);// cutout display
+    translate([11,-1,32]) roundedcube(20,31.5,2,2); 
+    translate([13,1,31.5]) roundedcube(16,27.5,30,4);// cutout display
 }
 
 //------------------------stamps for case top
 //bottom right
 difference() {
-    translate([88.5,5,17]) scale([1,1,1]) cylinder(h=16, d=8, center=false);
+    translate([88.5,5,19]) scale([1,1,1]) cylinder(h=16, d=8, center=false);
     translate([88.5,5,2]) scale([1,1,1]) cylinder(h=20, d=4.5, center=false);
 }
 //top right
 difference() {
-    translate([88.5,25,17]) scale([1,1,1]) cylinder(h=16, d=8, center=false);
+    translate([88.5,25,19]) scale([1,1,1]) cylinder(h=16, d=8, center=false);
     translate([88.5,25,2]) scale([1,1,1]) cylinder(h=20, d=4.5, center=false);
 }
 //top left
 difference() {
-    translate([4.5,25,17]) scale([1,1,1]) cylinder(h=16, d=8, center=false);
+    translate([4.5,25,19]) scale([1,1,1]) cylinder(h=16, d=8, center=false);
     translate([4.5,25,2]) scale([1,1,1]) cylinder(h=20, d=4.5, center=false);
 }
 //bottom left
 difference() {
-    translate([4.5,5,17]) scale([1,1,1]) cylinder(h=16, d=8, center=false);
+    translate([4.5,5,19]) scale([1,1,1]) cylinder(h=16, d=8, center=false);
     translate([4.5,5,2]) scale([1,1,1]) cylinder(h=20, d=4.5, center=false);
 }
 
@@ -185,9 +221,9 @@ module opendtu_pcb() {
     translate([10,-4,2])cube([28,55,14]);
     translate([20.5,-5,14])cube([8,6,3]);*/
     //nrf
-        //translate([57,6,11.5])cube([30,15,14]);
+        translate([57,6,11.5])cube([30,15,17]);
     //display
-        //translate([8,1,11.5])cube([27.5,27.5,13.5]);
+        translate([8,1,11.5])cube([27.5,27.5,13]);
     //translate([59,13.5+9,2])cube([27.5,16,17]);
     /*difference(){*/
         //cube([96,31,2]); //pcb
