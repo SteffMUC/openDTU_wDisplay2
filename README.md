@@ -15,6 +15,8 @@ Picture of model:
 
 Currently in production at jclPCB, photos will be published soon.
 Designed with KiCAD.
+
+
 2023-02-28: boards received, soldered, working reliable, pics in picture folder, case currently in progress - not yet perfectly fitting 
 
 
