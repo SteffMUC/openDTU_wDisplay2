@@ -1,13 +1,13 @@
 $fn=100;
 
-part="holder_ikea"; // body OR top OR body_top_debug OR top_printable OR spacer OR holder OR holder_ikea
+part="ikea"; // body OR top OR body_top_debug OR top_printable OR spacer OR holder OR ikea
 debug="false"; // true OR false
 
 if (debug == "true") {
     #translate([0,0,7])opendtu_pcb(); // rough model for pcb w esp32+nrf+display
 }
 
-if (part == "body"){
+if (part == "holder_ikea"){
     case_body();
 }
 
@@ -36,8 +36,9 @@ else if (part == "spacer"){
 else if (part == "holder"){
     rotate([0,50,0]) translate([69,-2.5,-2.5])case_holder();
 }
-else if (part == "holder_ikea"){
-    rotate([0,0,0]) translate([0,0,0])case_holder_ikea();
+
+else if (part == "ikea"){
+    rotate([-50,4,0]) translate([0,0,0])case_holder_ikea();
 }
 
 else{ // print all - except holder
