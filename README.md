@@ -13,12 +13,13 @@ Picture of model:
 </p>
 
 <p float="left">
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/pics/IMG_0781.jpg" alt="Final assembly" width="600"/>
+  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0781.jpg" alt="Final assembly" width="600"/>
 </p>
 
 
 
 2023-02-28: boards received, soldered, working reliable, pics in picture folder, case currently in progress - not yet perfectly fitting 
+
 2023-03-01: 
 
 Final printing of case done, got some requests for spare PCBs, all spare PCBs now gone, if you need a PCB, you can easily upload the gerber zip file on any PCB manufacturer, e.g. PLCPCB (10 pieces, with customs to Germany in 2 weeks roughly 14 EUR).
