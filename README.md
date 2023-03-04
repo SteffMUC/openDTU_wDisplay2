@@ -32,7 +32,7 @@
 
 * 2023-03-01: Final printing of case done, got some requests for spare PCBs, all spare PCBs now gone, if you need a PCB, you can easily upload the gerber zip file on any PCB manufacturer, e.g. PLCPCB (10 pieces, with customs to Germany in 2 weeks roughly 14 EUR).
 
-In case you are looking for a cheap source for the capacitors, I ordered mine with Christians_Shop at [Amazon](https://www.amazon.de/gp/product/B01MTSDA58/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) (they have a direct website as well):
+In case you are looking for a cheap source for the capacitors, I ordered mine with Christians_Shop at [Amazon](https://www.amazon.de/gp/product/B01MTSDA58/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) (they have a direct website as well).
 
 
 ## 3D Print:
