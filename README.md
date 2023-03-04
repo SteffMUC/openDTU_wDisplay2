@@ -18,15 +18,15 @@ Dedicated case available in [openscad](https://github.com/SteffMUC/openDTU_wDisp
 
 ## PCB assembly:
 <p float="left">
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0747.jpg" alt="Board Model" width="50"/>
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0748.jpg" alt="Board Model" width="50"/>
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0749.jpg" alt="Board Model" width="50"/>
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0759.jpg" alt="Board Model" width="50"/>
+  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0747.jpg" alt="PCB" width="200"/>
+  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0748.jpg" alt="PCB" width="200"/>
+  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0749.jpg" alt="PCB" width="200"/>
+  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0759.jpg" alt="PCB" width="200"/>
 </p>
 
 
 
-##History:
+## History:
 
 2023-02-28: boards received, soldered, working reliable, pics in picture folder, case currently in progress - not yet perfectly fitting 
 
@@ -40,7 +40,7 @@ https://www.amazon.de/gp/product/B01MTSDA58/ref=ppx_yo_dt_b_search_asin_title?ie
 ## 3D Print:
 Everything can be printed without support, expect for the ikea holder:
 <p float="left">
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0780.jpg" alt="Board Model" width="50"/>
+  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0780.jpg" alt="Ikea holder with support structure" width="100"/>
 </p>
 
 ## Known limitations: 
