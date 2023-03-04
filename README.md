@@ -18,7 +18,7 @@
 
 ## PCB assembly:
 <p float="left">
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0747.jpg" alt="PCB" width="200"/>
+  <img src="[https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0747.jpg](https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0747.jpeg)" alt="PCB" width="200"/>
   <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0748.jpg" alt="PCB" width="200"/>
   <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0749.jpg" alt="PCB" width="200"/>
   <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0759.jpg" alt="PCB" width="200"/>
