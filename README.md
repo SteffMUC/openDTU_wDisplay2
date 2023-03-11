@@ -8,20 +8,20 @@
 
 ## Picture of model:
 <p float="left">
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/kicad_board3d.jpg" alt="Board Model" width="300"/>
+  <img src="kicad_board3d.jpg" alt="Board Model" width="300"/>
 </p>
 
 ## Final printed case with display mounted on the side of a small IKEA Besta cupboard:
 <p float="left">
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0781.jpg" alt="Final assembly" width="200"/>
+  <img src="pics/IMG_0781.jpg" alt="Final assembly" width="200"/>
 </p>
 
 ## PCB assembly:
 <p float="left">
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0747.jpeg" alt="PCB" width="200"/>
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0748.jpeg" alt="PCB" width="200"/>
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0749.jpeg" alt="PCB" width="200"/>
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0750.jpeg" alt="PCB" width="200"/>
+  <img src="pics/IMG_0747.jpeg" alt="PCB" width="200"/>
+  <img src="pics/IMG_0748.jpeg" alt="PCB" width="200"/>
+  <img src="pics/IMG_0749.jpeg" alt="PCB" width="200"/>
+  <img src="pics/IMG_0750.jpeg" alt="PCB" width="200"/>
 </p>
 
 
@@ -38,7 +38,7 @@ In case you are looking for a cheap source for the capacitors, I ordered mine wi
 ## 3D Print:
 Everything can be printed without support, expect for the ikea holder:
 <p float="left">
-  <img src="https://github.com/SteffMUC/openDTU_wDisplay2/blob/main/pics/IMG_0780.jpg" alt="Ikea holder with support structure" width="200"/>
+  <img src="pics/IMG_0780.jpg" alt="Ikea holder with support structure" width="200"/>
 </p>
 
 ## Known limitations: 
