@@ -32,6 +32,8 @@
 
 * 2023-03-01: Final printing of case done, got some requests for spare PCBs, all spare PCBs now gone, if you need a PCB, you can easily upload the gerber zip file on any PCB manufacturer, e.g. PLCPCB (10 pieces, with customs to Germany in 2 weeks roughly 14 EUR).
 
+* 2023-03-11: Accepted pull request from @Nightreaver, thanks for the contribution, backside silk screen now mirrored, nRF footprint changed by @Nightreaver to support nRF+ with antenna (Note: openscad case not adapted and currently not planned to be adapted)
+
 In case you are looking for a cheap source for the capacitors, I ordered mine with Christians_Shop at [Amazon](https://www.amazon.de/gp/product/B01MTSDA58/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) (they have a direct website as well).
 
 
@@ -42,7 +44,7 @@ Everything can be printed without support, expect for the ikea holder:
 </p>
 
 ## Known limitations: 
-* Backside silkscreen is not mirrored, in Kicad, still needs to be fixed, result is mirrored text on backside (for new orders).
+* Backside silkscreen is not mirrored, in Kicad, still needs to be fixed, result is mirrored text on backside (for new orders). --> Fixed now
 * If you print the case: The holders for the PCB are not yet perfectly aligned (need 0.5mm adjust), I "clipped" 3 of them away to avoid reprinting.
 
 
