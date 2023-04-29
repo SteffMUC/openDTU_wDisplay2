@@ -5,6 +5,9 @@
 * 2nd version with much smaller PCB [1st version](https://github.com/SteffMUC/openDTU_wDisplay)
 * The PCB has the ESP32 on backside, Display and nRF24l01 on frontside.
 * Dedicated case available in [openscad](https://github.com/SteffMUC/openDTU_wDisplay2/tree/main/openscad) directory
+* Configuration file [nodemcu_esp32.json](https://github.com/tbnobody/OpenDTU/blob/master/docs/DeviceProfiles/nodemcu_esp32.json) available in [openDTU](https://github.com/tbnobody/OpenDTU), please select "Generic NodeMCU 32 with SSD1306" as profile
+* In case you struggle how to configure [openDTU](https://github.com/tbnobody/OpenDTU), the documentation can be found here [openDTU Display documentation](https://github.com/tbnobody/OpenDTU/blob/master/docs/Display.md)
+* The PCB is designed to work with ESP32S NodeMCU (38 Pins) e.g. [Amazon](https://www.amazon.de/gp/product/B0BF5NRF8H/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1)
 
 ## Picture of model:
 <p float="left">
